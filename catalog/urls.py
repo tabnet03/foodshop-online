@@ -1,8 +1,10 @@
 from django.urls import path
-from .views import registration, show_file, getname
+from .views import catalog_index, catalog_hisobla
+
+app_name = 'catalog'
 
 urlpatterns = [
-    path('', registration, name='registration'),
-    path('hisoblash', getname, name='get'),
-    path('mla', show_file, name='ge')
+    path('', catalog_index, name='index'),
+    path('hisobla/', catalog_hisobla, name='hisobla'),
+
 ]
